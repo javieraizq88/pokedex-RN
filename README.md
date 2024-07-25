@@ -12,9 +12,15 @@ npm install react-native-paper
 npm install react-native-safe-area-context
 cd ios && pod install && cd ..
 ```
+
+## axios para peticion del servidor
+```bash
+npm i axios
+```
+
+
 ```bash
 npm i react-native-prompt-android --save
-
 
 cd ios && pod install && cd ..
 ```
