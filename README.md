@@ -13,6 +13,12 @@ npm install react-native-safe-area-context
 cd ios && pod install && cd ..
 ```
 
+## Libreria TanStack Query
+guarda en cache las peticiones http
+```bash
+npm i @tanstack/react-query
+```
+
 ## axios para peticion del servidor
 ```bash
 npm i axios

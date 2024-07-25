@@ -1,19 +1,33 @@
 import { Text, View } from "react-native"
-import { Button } from "react-native-paper"
+import { ActivityIndicator, Button } from "react-native-paper"
 import { getPokemons } from "../../../actions/pokemons";
+import { useQuery } from "@tanstack/react-query";
 
 export const HomeScreen = () => {
 
-    getPokemons(); 
+    const { isLoading, data } = useQuery({
+        queryKey: ["pokemons"],
+        queryFn: () => getPokemons(),
+        staleTime: 1000 * 60 * 65, // TODO guarda la data en cache despues de 65 min
+    })
+
     return (
         <View>
             <Text>HomeScreen</Text>
-            <Button
-                mode="contained"
-                onPress={() => console.log("pressed")}
-            >
-                Press me
-            </Button>
+
+            {
+                isLoading ? (
+                    <ActivityIndicator />
+                ) : (
+                    <Button
+                        mode="contained"
+                        onPress={() => console.log("pressed")}
+                    >
+                        Press me
+                    </Button>
+                )
+            }
+
         </View>
     )
 }
