@@ -1,4 +1,4 @@
-export interface PokeApiPaginateResponse {
+export interface PokeApiPaginatedResponse {
     count: number;
     next: string;
     previous: string;

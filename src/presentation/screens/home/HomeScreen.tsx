@@ -7,7 +7,7 @@ export const HomeScreen = () => {
 
     const { isLoading, data } = useQuery({
         queryKey: ["pokemons"],
-        queryFn: () => getPokemons(),
+        queryFn: () => getPokemons(0),
         staleTime: 1000 * 60 * 65, // TODO guarda la data en cache despues de 65 min
     })
 
