@@ -1,18 +1,15 @@
 import 'react-native-gesture-handler';
 
-import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './src/presentation/navigator/StackNavigator';
-import { PaperProvider } from 'react-native-paper';
+import { ThemeContextProvider } from './src/presentation/context/ThemeContext';
 
 export const App = () => {
 
   return (
-    <PaperProvider>
+    <ThemeContextProvider>
+      <StackNavigator />
+    </ThemeContextProvider>
 
-      <NavigationContainer>
-        <StackNavigator />
-      </NavigationContainer>
-    </PaperProvider>
   );
 }
 
