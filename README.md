@@ -4,8 +4,15 @@ npm install @react-navigation/native
 npm install react-native-screens react-native-safe-area-context
 npm install @react-navigation/stack
 npm install react-native-gesture-handler
+```
 
-
+## React Native Paper
+```bash
+npm install react-native-paper
+npm install react-native-safe-area-context
+cd ios && pod install && cd ..
+```
+```bash
 npm i react-native-prompt-android --save
 
 
